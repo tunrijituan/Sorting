@@ -59,3 +59,23 @@ for(i = 1; i < n; i++){
 * 归并排序采用分治法（Divide and Conquer），将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。
 * 依次合并相邻有序子序列
 ## 6.希尔排序； 
+## 7.二分查找；
+* 二分查找主要应用于对数值的查找；（前提条件为数组有序，如果无序，需要对数组进行排序，如果有频繁插入或者删除操作则不适用）
+* 主要设定3个指针，依次指向low，high，middle
+* 通过与要查找的数值进行对比
+```
+ int low=0;
+		int high=srcAaary.length-1;
+		while(low<=high){
+			int middle=(low+high)>>1;
+		    if(des==srcAaary[middle]){
+		    	return middle;
+		    }
+		    else if(des<srcAaary[middle]){
+		    	high=middle-1;
+		    }
+		    else{
+		    	low=high+1;
+		    }
+		}
+```
