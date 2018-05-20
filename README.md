@@ -65,17 +65,17 @@ for(i = 1; i < n; i++){
 * 通过与要查找的数值进行对比
 ```
  int low=0;
-		int high=srcAaary.length-1;
-		while(low<=high){
-			int middle=(low+high)>>1;
-		    if(des==srcAaary[middle]){
-		    	return middle;
-		    }
-		    else if(des<srcAaary[middle]){
-		    	high=middle-1;
-		    }
-		    else{
-		    	low=high+1;
-		    }
-		}
+ int high=srcAaary.length-1;
+ while(low<=high){
+   int middle=(low+high)>>1;
+   if(des==srcAaary[middle]){
+	return middle;
+       }
+   else if(des<srcAaary[middle]){
+	high=middle-1;
+       }
+   else{
+	low=high+1;
+	}
+   }
 ```
